@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* PRIMARY COLORS*/
+
+    --ORANGE: hsl(31, 77%, 52%);
+    --DARK-TEAL: hsl(184, 100%, 22%);
+    --DARK-GREEN: hsl(179, 100%, 13%);
+
+    /* NEUTRAL COLORS */
+    --TRANSPARENT-WHITE: hsla(0, 0%, 100%, 0.75);
+    --VERY-LIGHT-GRAY: hsl(0, 0%, 95%);
+}
+    /* || RESET */
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* GENERAL STYLES */
+    html {
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 15px;
+        color: var(--TRANSPARENT-WHITE);
+    }
+
+    h1{
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.7rem;
+        color: var(--VERY-LIGHT-GRAY);
+        margin: 2rem 0 1.66rem 0;
+        text-transform: uppercase;
+    }
+
+    p {
+        line-height: 1.67;
+    }
+
+    body {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    span {
+        white-space: nowrap;
+        display: inline;
+    }
+
+    /* || COMPONENTS */
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .container div {
+        box-sizing: border-box;
+        padding: 3.2rem;
+        width: 305px;
+    }
+    
+    .bg-orange {
+        background-color: var(--ORANGE);
+        border-radius: 3% 0 0 3%;
+    }
+
+    .bg-teal {
+        background-color: var(--DARK-TEAL);
+    }
+
+    .bg-green {
+        background-color: var(--DARK-GREEN);
+        border-radius: 0 3% 3% 0;
+    }
+
+    button {
+        background-color: var(--VERY-LIGHT-GRAY);
+        border: none;
+        border-radius: 3rem;
+        text-decoration: none;
+        cursor: pointer;
+        width: 150px;
+        height: 49px;
+        margin-top: 5.4rem;
+        font-weight: bold;
+    }
+
+    .btn-orange {
+        color: var(--ORANGE);
+    }
+
+    .btn-teal {
+        color: var(--DARK-TEAL);
+    }
+
+    .btn-green{
+        color: var(--DARK-GREEN);
+    }
+
+    button:active {
+        background-color: transparent;
+        color: var(--TRANSPARENT-WHITE);
+        border: 2px solid var(--TRANSPARENT-WHITE);
+    }
+
+    @media screen and (max-width: 720px) {
+        .container {
+            flex-direction: column;
+            margin: 20px 0 20px 0;
+        }
+
+        button {
+            margin-top: 1.5rem;
+        }
+
+        .container div {
+            padding: 3.2rem;
+            width: 330px;
+        }
+
+        .bg-orange {
+            border-radius: 3% 3% 0 0;
+        }
+
+        .bg-green {
+            border-radius: 0 0 3% 3%;
+        }
+    
+    }
